@@ -1,0 +1,27 @@
+<div>
+    <h3>Planned Items</h3>
+
+    <table class="uk-table uk-table-responsive uk-table-divider">
+      <thead>
+          <tr>
+              <th class="uk-table-expand">Category</th>
+              <th class="uk-table-expand">Amount</th>
+              <th class="uk-table-expand">Action To Add</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><input class="uk-input uk-width-1-2" type="text"  v-model="categoryModel.name"></td>
+              <td><input class="uk-input uk-width-1-2" type="text"  v-model="categoryModel.amount"></td>
+              <td><button class="uk-button uk-button-default uk-button-small" type="button" @click="emitCategDetails">Add</button></td>
+          </tr>
+          <tr v-for="category in listofCategory" >
+              <td>{{ category.name }}</td>
+              <td>{{ category.amount }}</td>
+              <td>
+                <!-- <button class="uk-button uk-button-secondary" type="button">Edit</button> -->
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  </div>
